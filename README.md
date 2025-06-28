@@ -1,6 +1,8 @@
 # The Noble Quran
 
-Open Source Web App for reading Quran for free and without ads.
+Ad-Free, and Open Source Web App for reading Quran — Works Offline
+
+[noblequran.netlify.app](https://noblequran.netlify.app)
 
 <!-- Screenshots Grid -->
 <!-- <p style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;">
@@ -8,23 +10,20 @@ Open Source Web App for reading Quran for free and without ads.
   <img src="./screenshots/surah-page-light.png" alt="Surah Page Light Theme">
 </p> -->
 
-<!-- ![HomePage Light Theme](./screenshots/home-page-light.png)
+## Screenshots
+![HomePage Light Theme](./screenshots/home-page-light.png)
 <br/>
-![Surah Page Light Theme](./screenshots/surah-page-light.png) -->
+![Surah Page Light Theme](./screenshots/surah-page-light.png)
 
-<table border="0">
+<!-- <table cellspacing="0" cellpadding="0" border="0">
   <tr>
     <td><img src="./screenshots/home-page-light.png" alt="HomePage Light Theme" /></td>
     <td><img src="./screenshots/surah-page-light.png" alt="Surah Page Light Theme" /></td>
   </tr>
-</table>
+</table> -->
 
 
 
 # Contribution
 
 Please feel free to fork and contribute to benefit everyone's experience.
-
-# Want to start using now?
-
-Project is available on [netlify.](https://noblequran.netlify.app)
