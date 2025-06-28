@@ -2,7 +2,7 @@
 
 Ad-Free, and Open Source Web App for reading Quran — Works Offline
 
-[noblequran.netlify.app](https://noblequran.netlify.app)
+[Visit - noblequran.netlify.app](https://noblequran.netlify.app)
 
 <!-- Screenshots Grid -->
 <!-- <p style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;">
