@@ -19,13 +19,13 @@ export class ThemeService {
       name: 'theme-color',
       content: theme.appbar_background_color,
     });
-    localStorage.setItem(this.themeStorage, JSON.stringify(theme));
+    sessionStorage.setItem(this.themeStorage, JSON.stringify(theme));
     this.theme.next(theme.className);
   }
 
   storedThemeIsDark() {
     try {
-      const storedTheme = JSON.parse(localStorage.getItem(this.themeStorage));
+      const storedTheme = JSON.parse(sessionStorage.getItem(this.themeStorage));
       if (storedTheme.id.includes(darkTheme.id)) {
         return true;
       }
@@ -44,9 +44,10 @@ export class ThemeService {
   }
 
   initialize() {
-    const storedTheme = localStorage.getItem(this.themeStorage);
+    const storedTheme = sessionStorage.getItem(this.themeStorage);
     if (!storedTheme) {
-      this.setTheme(lightTheme);
+      const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+      this.setTheme(prefersDark ? darkTheme : lightTheme);
     } else {
       const storedTheme = this.storedThemeIsDark() ? darkTheme : lightTheme;
       this.setTheme(storedTheme);

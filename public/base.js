@@ -1,18 +1,24 @@
-var loadStartedAt = Date.now(),
-  themes = ['light-theme', 'dark-theme'],
-  documentElement = document.documentElement,
-  storedTheme = localStorage.getItem('theme'),
-  isStandalone = matchMedia && matchMedia('(display-mode: standalone)').matches,
-  preferredTheme =
-    matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? themes[1] : themes[0];
+// @ts-check
+var loadStartedAt = Date.now();
+var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+var themes = ['light-theme', 'dark-theme'];
+var documentElement = document.documentElement;
+var preferredTheme = prefersDark ? themes[1] : themes[0];
+
+console.log({ preferredTheme, prefersDark });
+
+documentElement.classList.add(preferredTheme);
+
+var isStandalone = matchMedia && matchMedia('(display-mode: standalone)').matches;
 
 function removeSplash() {
   var nodes = Array.from(document.querySelectorAll('.splash'));
   if (!nodes.length) return;
 
   for (var idx = 0; idx < nodes.length; idx++) {
-    if (nodes[idx] && nodes[idx].parentElement && nodes[idx].tagName !== 'SCRIPT') {
-      nodes[idx].parentElement.removeChild(nodes[idx]);
+    var parentElement = nodes[idx].parentElement;
+    if (nodes[idx] && parentElement && nodes[idx].tagName !== 'SCRIPT') {
+      parentElement.removeChild(nodes[idx]);
     }
   }
 
@@ -29,13 +35,6 @@ function onRouteLoad() {
 
 function init() {
   documentElement.setAttribute('no-scroll', 'true');
-
-  try {
-    var className = JSON.parse(storedTheme)['className'];
-    className && documentElement.classList.add(className);
-  } catch (error) {
-    documentElement.classList.add(preferredTheme);
-  }
 
   // Remove Splash immediately when is PWA (Standalone)
   isStandalone && removeSplash();
