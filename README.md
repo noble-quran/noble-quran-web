@@ -3,14 +3,14 @@
 Open Source Web App for reading Quran for free and without ads.
 
 <!-- Screenshots Grid -->
-<p style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;">
+<!-- <p style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;">
   <img src="./screenshots/home-page-light.png" alt="HomePage Light Theme">
   <img src="./screenshots/surah-page-light.png" alt="Surah Page Light Theme">
-</p>
+</p> -->
 
-<!-- <p align="center"><img src="./screenshots/home-page-light.png" alt="HomePage Light Theme"></p>
-
-<p align="center"><img src="./screenshots/surah-page-light.png" alt="Surah Page Light Theme"></p> -->
+![HomePage Light Theme](./screenshots/home-page-light.png)
+<br/>
+![Surah Page Light Theme](./screenshots/surah-page-light.png)
 
 # Contribution
 
