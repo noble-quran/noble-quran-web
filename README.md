@@ -12,7 +12,7 @@ Open Source Web App for reading Quran for free and without ads.
 <br/>
 ![Surah Page Light Theme](./screenshots/surah-page-light.png) -->
 
-<table>
+<table border="0">
   <tr>
     <td><img src="./screenshots/home-page-light.png" alt="HomePage Light Theme" /></td>
     <td><img src="./screenshots/surah-page-light.png" alt="Surah Page Light Theme" /></td>
