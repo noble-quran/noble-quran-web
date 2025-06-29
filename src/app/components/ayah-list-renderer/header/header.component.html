@@ -16,6 +16,7 @@
       [class.open]="menuOpen"
       (menuClosed)="menuOpen = false"
       (menuOpened)="menuOpen = true"
+      (menuOpened)="onMenuOpened()"
       [matMenuTriggerFor]="navMenu"
     >
       {{ menuList[currentMenuItemIndex]?.title }}
