@@ -11,6 +11,7 @@ export class ReadHeaderComponent {
   constructor(public navigator: NavigationService) {}
 
   @Input() menuList: any;
+  @Input() menuListType?: string;
   @Input() currentMenuItemIndex: number;
 
   public menuOpen = false;
@@ -31,8 +32,6 @@ export class ReadHeaderComponent {
   }
 
   async onMenuOpened() {
-    console.log('menu opened');
-
     await asyncTimer(0);
     this.scrollToActiveMenuItem();
 

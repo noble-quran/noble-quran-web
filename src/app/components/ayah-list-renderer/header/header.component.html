@@ -31,7 +31,7 @@
         routerLinkActive="list-item-active"
         *ngFor="let menuListItem of menuList"
       >
-        {{ menuListItem.title }}
+        {{menuListType === 'surah' ? menuListItem.index + '.' + '&nbsp;'.repeat(3) : '' }}{{ menuListItem.title }}
       </button>
     </mat-menu>
   </div>
