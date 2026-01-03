@@ -1,4 +1,5 @@
 // @ts-check
+
 var loadStartedAt = Date.now();
 var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
 var themes = ['light-theme', 'dark-theme'];
@@ -35,6 +36,13 @@ function onRouteLoad() {
 
 function init() {
   documentElement.setAttribute('no-scroll', 'true');
+
+
+  // remove splash when hide-splash=true is present in search params
+  if (decodeURIComponent(window.location.search).includes('hide-splash=true')) {
+    removeSplash();
+    return;
+  }
 
   // Remove Splash immediately when is PWA (Standalone)
   isStandalone && removeSplash();
